@@ -1,0 +1,826 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>form 1</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        :root {
+            --theme-color-blue: #1a213e;
+            --theme-color-yellow: #ffb600;
+            --theme-color-green: #598027;
+        }
+
+/*        body,
+        html {
+            padding: 0;
+            margin: 0;
+            background: #f7f8fa;
+            font-family: "Lato", sans-serif;
+            color: #676767;
+        }*/
+        .karx-add-btn {
+            height: 65px;
+            line-height: 65px;
+            background-color: #598027;
+            display: inline-block;
+            padding: 0 40px;
+            border-radius: 5px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            text-transform: uppercase;
+            border: 0;
+            transition: 0.3s;
+        }
+
+            .karx-add-btn:hover {
+                background-color: var(--theme-color-blue);
+                color: #fff;
+            }
+        .wrapper {
+            position: relative;
+            /*max-width: 1080px;*/
+            max-width: 100%;
+            margin: auto auto;
+        }
+
+        .wizard {
+            /*max-width: 620px;*/
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .wizard__header {
+            position: relative;
+            color: #fff;
+            padding: 50px;
+            border-radius: 5px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            text-align: center;
+            height: 50px;
+            background-color: #4d637b;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .wizard__header-content {
+            position: absolute;
+            width: 100%;
+            padding: 0 50px;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -60%);
+        }
+
+        .wizard__header-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(77, 99, 123, 0.6);
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .wizard__title {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            margin: 0;
+        }
+
+        .wizard__subheading {
+            text-transform: uppercase;
+            margin: 0;
+            font-size: 0.8rem;
+            font-weight: 100;
+            letter-spacing: 2px;
+        }
+
+            .wizard__subheading span {
+                font-weight: 600;
+            }
+
+        .wizard__steps {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            transform: translateY(50%);
+            z-index: 10;
+        }
+
+        .wizard__footer {
+            padding: 0 50px 50px;
+            border-radius: 5px;
+        }
+
+        .wizard__content {
+            background: #fff;
+            box-shadow: 0px 0px 10px #c5c5c5;
+            border-radius: 5px;
+        }
+
+        .wizard__congrats-message {
+            color: #676767;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+        }
+
+        .wizard.completed .wizard__content {
+            animation: gettingOut 2s cubic-bezier(1, -0.71, 1, 1.16) forwards;
+        }
+
+        .wizard.completed .wizard__congrats-message {
+            animation: fadeIn 2s cubic-bezier(1, -0.71, 1, 1.16) forwards;
+        }
+
+        .line {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            z-index: -1;
+            height: 6px;
+            transition: all 0.5s ease;
+        }
+
+            .line.-start {
+                left: 0%;
+                background: #5094de;
+                width: 50%;
+            }
+
+            .line.-end {
+                left: 50%;
+                background: #5094de;
+                width: 50%;
+            }
+
+            .line.-background {
+                background: #c3c3c3;
+                width: 100%;
+            }
+
+            .line.-progress {
+                background: #5094de;
+                width: 100%;
+                transform: scaleX(0);
+                transform-origin: left center;
+            }
+
+            .line.-in-progress {
+                transform: scaleX(1);
+            }
+
+        .panels {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .panel {
+            width:100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 0.5s all;
+            padding: 50px;
+        }
+
+        .panel__header {
+            margin-bottom: 30px;
+        }
+
+        .panel__title {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            margin: 0;
+        }
+
+        .panel__subheading {
+            font-size: 0.9rem;
+            line-height: 1.2rem;
+            margin: 0;
+        }
+
+        .panel.movingOutBackward {
+            transform: translateX(-1000px);
+        }
+
+        .panel.movingOutFoward {
+            transform: translateX(1000px);
+        }
+
+        .panel.movingIn {
+            transform: translateX(0);
+        }
+
+        .steps {
+            position: relative;
+            display: flex;
+            flex: 0 1 auto;
+            color: #fff;
+        }
+
+        .step {
+            flex-basis: 0;
+            flex-grow: 1;
+            max-width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .step__content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .step__number {
+            font-size: 1.3rem;
+            color: #676767;
+            background: #fff;
+            font-weight: 800;
+            width: 50px;
+            height: 50px;
+            line-height: 40px;
+            margin: 0 auto;
+            border-radius: 50%;
+            border: 5px solid #c3c3c3;
+            transition: opacity 0.5s;
+            opacity: 1;
+            z-index: 5;
+        }
+
+        .step.-completed .step__number {
+            opacity: 0;
+        }
+
+        .step.-completed .checkmark {
+            z-index: 0;
+            animation: fill 0.4s ease-in-out forwards, scale 0.3s ease-in-out 0.6s both;
+        }
+
+        .step.-completed .checkmark__check {
+            animation: stroke 0.5s linear 0.4s forwards;
+        }
+
+        .step.-completed .line {
+            transform: scaleX(1);
+        }
+
+        .step:last-child .line {
+            width: 50%;
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            stroke-width: 2;
+            stroke: #fff;
+            stroke-miterlimit: 10;
+            box-shadow: inset 0px 0px 0px #75b2f5;
+            z-index: -1;
+        }
+
+        .checkmark__circle {
+            stroke-dasharray: 166;
+            stroke-dashoffset: 166;
+            stroke-width: 8;
+            stroke-miterlimit: 10;
+            stroke: #5094de;
+            fill: none;
+            animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+        }
+
+        .checkmark__check {
+            transform-origin: 50% 50%;
+            stroke-dasharray: 40;
+            stroke-dashoffset: 40;
+            stroke: #fff;
+            stroke-width: 5;
+        }
+
+        .button {
+            cursor: pointer;
+            font-size: 1rem;
+            line-height: 1rem;
+            background: var(--theme-color-blue);
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            outline: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+            .button:hover {
+                background: var(--theme-color-green)
+            }
+
+            .button.previous {
+                margin-right: 5px;
+            }
+
+            .button.disabled {
+                background: #c3c3c3;
+                cursor: default;
+            }
+
+        @keyframes stroke {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes scale {
+            50% {
+                transform: translateX(-50%) scale3d(1.5, 1.5, 1.5);
+            }
+
+            100% {
+                transform: scale3d(0);
+            }
+        }
+
+        @keyframes fill {
+            100% {
+                box-shadow: inset 0px 0px 0px 30px #75b2f5;
+            }
+        }
+
+        /* @keyframes gettingOut {
+            0% {
+                transform: translateY(0%);
+            }
+
+            30% {
+                transform: translateY(100px);
+            }
+
+            100% {
+                transform: translateY(-200%);
+            }
+        }*/
+
+        @keyframes fadeIn {
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="wizard" class="wizard">
+            <div class="wizard__content">
+                <header class="wizard__header">
+                    <div class="wizard__header-overlay"></div>
+
+
+
+                    <div class="wizard__steps">
+                        <nav class="steps">
+                            <div class="step">
+                                <div class="step__content">
+                                    <p class="step__number">1</p>
+                                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                                    </svg>
+
+                                    <div class="lines">
+                                        <div class="line -start">
+                                        </div>
+
+                                        <div class="line -background">
+                                        </div>
+
+                                        <div class="line -progress">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step__content">
+                                    <p class="step__number">2</p>
+                                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                                    </svg>
+
+                                    <div class="lines">
+                                        <div class="line -background">
+                                        </div>
+
+                                        <div class="line -progress">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <div class="step__content">
+                                    <p class="step__number">3</p>
+                                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                                    </svg>
+
+                                    <div class="lines">
+                                        <div class="line -background">
+                                        </div>
+
+                                        <div class="line -progress">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </header>
+
+
+                <div class="panels">
+                    <div class="panel">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="">
+                                    <div class="row">
+
+                                        <div class="col-lg-12 col-md-12 ">
+
+                                            <h4 class="ms-2 mt-2 mb-3" style="color: var(--theme-color-blue) ">Application Requirements:</h4>
+                                            <table class="table table-responsive table-bordered">
+                                                <thead class="bg-success text-white text-center">
+                                                    <tr>
+                                                        <th class="col-md-1"></th>
+                                                        <th class="col-md-9">Item</th>
+                                                        <th class="col-md-2">Status</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>
+                                                            <h6>1. Start a New Application</h6>
+                                                            <p>Once you click the start button, a reference number will be assigned to your new application.</p>
+                                                        </td>
+                                                        <td class="col-md-2 text-center"><button  class="button" >Start</button></td>
+                                                    </tr>
+                                                    <!--<tr>
+                                                        <td><p></p></td>
+                                                        <td><p class="fw-bolder">Complete Applicant Information</p></td>
+                                                        <td class="text-center"><p><a href="javasctipr:void(0);" class="link-danger">Not Completed</a> </p></td>
+                                                        </tr>
+
+                                                    <tr>
+                                                        <td><p></p></td>
+                                                        <td><p class="fw-bolder">Complete Job Location</p></td>
+                                                        <td class="text-center"><p><a href="javasctipr:void(0);" class="link-danger">Not Completed</a></p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><p></p></td>
+                                                        <td><p class="fw-bolder">Complete Work Description</p></td>
+                                                        <td class="text-center"><p><a href="javasctipr:void(0);" class="link-danger">Not Completed</a></p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><p></p></td>
+                                                        <td>
+                                                            <p class="fw-bolder">Complete Driveway(s) Information</p>
+                                                            <p>Use this option if you are constructing a new driveway or replacing a full driveway. Answer No to this question, if not applicable.</p><p>
+                                                                If you are repairing a portion of a driveway, you will be able to
+                                                                indicate that under Other Items.
+                                                            </p><p>One or more driveways can be added using this option.</p>
+                                                        </td>
+                                                        <td class="text-center"><p><a href="javasctipr:void(0);" class="link-danger">Not Completed</a></p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><p></p></td>
+                                                        <td>
+                                                            <p class="fw-bolder">Complete Sidewalk(s) Information</p>
+                                                            <p>Use this option if you are constructing or repairing sidewalk(s).</p>
+                                                            <p>Answer No to this question, if not applicable.</p>
+                                                            <p>A new sidewalk can only be constructed next to an existing concrete curb.</p>
+                                                            <p>One or more sidewalk segments can be added using this option.</p>
+                                                        </td>
+                                                        <td class="text-center"><p><a href="javasctipr:void(0);" class="link-danger">Not Completed</a></p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="col-md-1"><p></p></td>
+                                                        <td class="col-md-9">
+                                                            <p class="fw-bolder">Complete Other Items</p>
+                                                            <p class="fw-bold">Use this option if you are performing any of the following:</p>
+                                                            <p>Repair a portion of an existing driveway - Install or repair an ADA access ramp - Install curb drain(s) - Widening an existing</p>
+                                                            <p>driveway - Close an existing driveway and repair curb - Repair an existing gutter - Replace existing asphalt in roadway or alley.</p>
+                                                            <p class="fw-bolder">Leave quantities blank, if not applicable</p>
+                                                        </td>
+                                                        <td class="text-center"><p><a href="javasctipr:void(0);" class="link-danger">Not Completed</a></p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="col-md-1"><p></p></td>
+                                                        <td class="col-md-9">
+                                                            <p class="fw-bolder">Add Attachments</p>
+                                                        </td>
+                                                        <td class="text-center"><p><a href="javasctipr:void(0);" class="link-danger">Not Completed</a></p></td>
+                                                    </tr>-->
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel ">
+                        <h4 class="ms-2 mt-2 mb-3" style="color: var(--theme-color-blue) ">Verify Application Information</h4>
+                        <div class="table-responsive p-2">
+                            <table class="table table-responsive table-bordered ">
+                                <thead class="bg-success text-white text-center visually-hidden" >
+                                    <tr>
+                                        <th class="col-sm-3"></th>
+                                        <th class="col-sm-9"></th>
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <td >Applicant</td>
+                                    <td >
+
+                                        <input class="form-control" readonly value="Thuy-An Nguyen" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td >Contact</td>
+                                    <td >
+                                        <input class="form-control" readonly value="" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td >Address</td>
+                                    <td >
+                                        <input class="form-control " readonly value="601 S Figueroa St Suite 4650," />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td >Address (Line2)</td>
+                                    <td>
+                                        <input class="form-control " readonly value="" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td >City</td>
+                                    <td >
+                                        <input class="form-control " readonly value="Los Angeles" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td >State</td>
+                                    <td >
+                                        <input class="form-control " readonly value="CA" />
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td >Zip/Postal Code</td>
+                                    <td >
+                                        <input class="form-control " readonly value="90017" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Phone</td>
+                                    <td >
+                                        <input class="form-control " readonly value="(323) 488-2846" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td >Email</td>
+                                    <td >
+                                        <input class="form-control " readonly value="thuy-an.nguyen@3insys.com" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Applicant Role</td>
+                                    <td >
+                                        <select class="form-select">
+                                            <option>Select One</option>
+                                            <option>Agent</option>
+                                            <option>Contractor</option>
+                                            <option>Homeowner</option>
+                                            <option>Owner/ Developer</option>
+                                            <option>Private Engineer</option>
+                                        </select>
+
+                                    </td>
+                                </tr>
+
+                               
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <h4 class="ms-2 mt-2 mb-3" style="color: var(--theme-color-blue) ">Review & Confirm</h4>
+                    </div>
+                </div>
+
+                <div class="wizard__footer">
+                    <button class="button previous">Previous</button>
+                    <button class="button next">Next</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script>
+        class Steps {
+            constructor(wizard) {
+                this.wizard = wizard;
+                this.steps = this.getSteps();
+                this.stepsQuantity = this.getStepsQuantity();
+                this.currentStep = 0;
+            }
+
+            setCurrentStep(currentStep) {
+                this.currentStep = currentStep;
+            }
+
+            getSteps() {
+                return this.wizard.getElementsByClassName('step');
+            }
+
+            getStepsQuantity() {
+                return this.getSteps().length;
+            }
+
+            handleConcludeStep() {
+                this.steps[this.currentStep].classList.add('-completed');
+            }
+
+            handleStepsClasses(movement) {
+                if (movement > 0)
+                    this.steps[this.currentStep - 1].classList.add('-completed');
+                else if (movement < 0)
+                    this.steps[this.currentStep].classList.remove('-completed');
+            }
+        }
+
+        class Panels {
+            constructor(wizard) {
+                this.wizard = wizard;
+                this.panelWidth = this.wizard.offsetWidth;
+                this.panelsContainer = this.getPanelsContainer();
+                this.panels = this.getPanels();
+                this.currentStep = 0;
+
+                this.updatePanelsPosition(this.currentStep);
+                this.updatePanelsContainerHeight();
+            }
+
+            getCurrentPanelHeight() {
+                return `${this.getPanels()[this.currentStep].offsetHeight}px`;
+            }
+
+            getPanelsContainer() {
+                return this.wizard.querySelector('.panels');
+            }
+
+            getPanels() {
+                return this.wizard.getElementsByClassName('panel');
+            }
+
+            updatePanelsContainerHeight() {
+                this.panelsContainer.style.height = this.getCurrentPanelHeight();
+            }
+
+            updatePanelsPosition(currentStep) {
+                const panels = this.panels;
+                const panelWidth = this.panelWidth;
+
+                for (let i = 0; i < panels.length; i++) {
+                    panels[i].classList.remove(
+                        'movingIn',
+                        'movingOutBackward',
+                        'movingOutFoward'
+                    );
+
+                    if (i !== currentStep) {
+                        if (i < currentStep) panels[i].classList.add('movingOutBackward');
+                        else if (i > currentStep) panels[i].classList.add('movingOutFoward');
+                    } else {
+                        panels[i].classList.add('movingIn');
+                    }
+                }
+
+                this.updatePanelsContainerHeight();
+            }
+
+            setCurrentStep(currentStep) {
+                this.currentStep = currentStep;
+                this.updatePanelsPosition(currentStep);
+            }
+        }
+
+        class Wizard {
+            constructor(obj) {
+                this.wizard = obj;
+                this.panels = new Panels(this.wizard);
+                this.steps = new Steps(this.wizard);
+                this.stepsQuantity = this.steps.getStepsQuantity();
+                this.currentStep = this.steps.currentStep;
+
+                this.concludeControlMoveStepMethod = this.steps.handleConcludeStep.bind(this.steps);
+                this.wizardConclusionMethod = this.handleWizardConclusion.bind(this);
+            }
+
+            updateButtonsStatus() {
+                if (this.currentStep === 0)
+                    this.previousControl.classList.add('disabled');
+                else
+                    this.previousControl.classList.remove('disabled');
+            }
+
+            updtadeCurrentStep(movement) {
+                this.currentStep += movement;
+                this.steps.setCurrentStep(this.currentStep);
+                this.panels.setCurrentStep(this.currentStep);
+
+                this.handleNextStepButton();
+                this.updateButtonsStatus();
+            }
+
+            handleNextStepButton() {
+                if (this.currentStep === this.stepsQuantity - 1) {
+                    this.nextControl.innerHTML = 'Finish!';
+
+                    this.nextControl.removeEventListener('click', this.nextControlMoveStepMethod);
+                    this.nextControl.addEventListener('click', this.concludeControlMoveStepMethod);
+                    this.nextControl.addEventListener('click', this.wizardConclusionMethod);
+                } else {
+                    this.nextControl.innerHTML = 'Next';
+
+                    this.nextControl.addEventListener('click', this.nextControlMoveStepMethod);
+                    this.nextControl.removeEventListener('click', this.concludeControlMoveStepMethod);
+                    this.nextControl.removeEventListener('click', this.wizardConclusionMethod);
+                }
+            }
+
+            handleWizardConclusion() {
+                this.wizard.classList.add('completed');
+            };
+
+            addControls(previousControl, nextControl) {
+                this.previousControl = previousControl;
+                this.nextControl = nextControl;
+                this.previousControlMoveStepMethod = this.moveStep.bind(this, -1);
+                this.nextControlMoveStepMethod = this.moveStep.bind(this, 1);
+
+                previousControl.addEventListener('click', this.previousControlMoveStepMethod);
+                nextControl.addEventListener('click', this.nextControlMoveStepMethod);
+
+                this.updateButtonsStatus();
+            }
+
+            moveStep(movement) {
+                if (this.validateMovement(movement)) {
+                    this.updtadeCurrentStep(movement);
+                    this.steps.handleStepsClasses(movement);
+                } else {
+                    throw ('This was an invalid movement');
+                }
+            }
+
+            validateMovement(movement) {
+                const fowardMov = movement > 0 && this.currentStep < this.stepsQuantity - 1;
+                const backMov = movement < 0 && this.currentStep > 0;
+
+                return fowardMov || backMov;
+            }
+        }
+
+        let wizardElement = document.getElementById('wizard');
+        let wizard = new Wizard(wizardElement);
+        let buttonNext = document.querySelector('.next');
+        let buttonPrevious = document.querySelector('.previous');
+
+        wizard.addControls(buttonPrevious, buttonNext);
+
+    </script>
+</body>
+</html>

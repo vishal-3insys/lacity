@@ -1,0 +1,1266 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Class A Permit | Bureau of Engineering | City of Los Angeles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" />
+    <style>
+        p {
+            margin-bottom: auto !important;
+        }
+
+        .wizard .steps > ul > a, .wizard .steps > ul > li {
+            margin-bottom: 0.5rem;
+        }
+        /* .wizard .steps .done a, .wizard .steps .done a:active, .wizard .steps .done a:hover {
+            background-color: rgba(85,110,230,.2);
+            color: var(--bs-gray-700)
+        }*/
+        .wizard .steps .done a .number, .wizard .steps .done a:active .number, .wizard .steps .done a:hover .number {
+            background-color: #556ee6;
+            color: #fff
+        }
+    </style>
+</head>
+
+<body data-sidebar="dark" data-layout-mode="light">
+
+    <!-- <body data-layout="horizontal" data-topbar="dark"> -->
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+
+
+        <header id="page-topbar">
+            <div class="navbar-header">
+                <div class="d-flex">
+                    <!-- LOGO -->
+                    <div class="navbar-brand-box">
+                        <a href="class-a-permit.html" class="logo logo-dark">
+                            <span class="logo-sm w-75">
+                                <img src="assets/images/lalogo1.png" alt="" style="width:100%">
+                            </span>
+                            <span class="logo-lg w-75">
+                                <img src="assets/images/lalogo1.png" alt="" style="width:100%">
+                            </span>
+                        </a>
+
+                        <a href="class-a-permit.html" class="logo logo-light">
+                            <span class="logo-sm w-75">
+                                <img src="assets/images/lalogo1.png" alt="" style="width:100%">
+                            </span>
+                            <span class="logo-lg w-75">
+                                <img src="assets/images/lalogo1.png" alt="" style="width:100%">
+                            </span>
+                        </a>
+                    </div>
+
+                    <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+                        <i class="fa fa-fw fa-bars"></i>
+                    </button>
+
+                    <div class="d-flex">
+
+                        <p class="d-flex align-items-center mt-3"><img class="ms-2" src="assets/images/logo1.png" style="height:50px"> </p>
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="d-flex">
+
+
+
+                    <div class="dropdown d-none d-lg-inline-block ms-1">
+                        <button type="button" class="btn header-item noti-icon waves-effect" data-bs-toggle="fullscreen">
+                            <i class="bx bx-fullscreen"></i>
+                        </button>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="vertical-menu">
+
+            <div data-simplebar class="h-100">
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul class="metismenu list-unstyled" id="side-menu">
+
+
+
+                        <li class="menu-title" key="t-apps">Class A Permit</li>
+
+
+                        <li>
+                            <a href="../class-A-permit-start-application.html" class="waves-effect">
+                                <i class="bx bx-info-circle"></i>
+                                <span key="t-chat">Instructions</span>
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="my-permit.html" class="waves-effect">
+                                <i class="bx bx-file"></i>
+                                <span key="t-file-manager">My Permit</span>
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="class-a-permit.html" class="waves-effect">
+                                <i class="bx bxs-file"></i>
+                                <span key="t-file-manager">Apply for a New Permit</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="waves-effect">
+                                <i class="bx bxs-file"></i>
+                                <span key="t-file-manager">Apply for a Supplemental Permit</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="view-application.html" class="waves-effect">
+                                <i class="bx bxs-file"></i>
+                                <span key="t-file-manager">View Application</span>
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="faq-construction-permit.html" class="waves-effect">
+                                <i class="bx bx-question-mark"></i>
+                                <span key="t-file-manager">FAQs</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contact-us.html" class="waves-effect">
+                                <i class="bx bxs-contact"></i>
+                                <span key="t-file-manager">Contact Us</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../index.html" class="waves-effect">
+                                <i class="bx bxs-home"></i>
+                                <span key="t-file-manager">Engineering Home Page</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../sign-in-class-A-permit.html" class="waves-effect">
+                                <i class="bx bxs-log-out"></i>
+                                <span key="t-file-manager">Logout</span>
+                            </a>
+                        </li>
+
+
+
+
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+            </div>
+        </div>
+        <!-- Left Sidebar End -->
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0 font-size-18">“Class “A” Construction Permit</h4>
+
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="class-a-permit-information1.html">Home</a></li>
+                                        <li class="breadcrumb-item"><a href="#">Construction "A" Permit</a></li>
+                                        <li class="breadcrumb-item active">Start My Application</li>
+                                    </ol>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <!--<h4 class="card-title mb-4">Vertical Wizard</h4>-->
+
+                                    <div id="vertical-example" class="vertical-wizard">
+                                        <!-- Seller Details -->
+                                        <h3>Start a New Application</h3>
+                                        <section>
+                                            <div data-step="Start a New Application">
+                                                <div class="row">
+                                                    <div class="table-responsive p-2">
+                                                        <h4 class="">Application Requirements:</h4>
+                                                        <table class="table table-responsive table-bordered table-striped">
+                                                            <thead class="bg-primary text-white text-center">
+                                                                <tr>
+                                                                    <th class="col-md-1"></th>
+                                                                    <th class="col-md-9">Item</th>
+                                                                    <th class="col-md-2">Status</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td>
+                                                                        <h6>1. Start a New Application</h6>
+                                                                        <p>Once you click the start button, a reference number will be assigned to your new application.</p>
+                                                                    </td>
+                                                                    <td class="col-md-2 text-center"><button class="btn btn-primary" data-bs-target="#startApplicarion" data-bs-toggle="modal">Start</button></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><p></p></td>
+                                                                    <td><p class="fw-bolder">Complete Applicant Information</p></td>
+                                                                    <td class="text-center"><p><a href="javasctipr:void(0);" class="link-danger">Not Completed</a> </p></td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td><p></p></td>
+                                                                    <td><p class="fw-bolder">Complete Job Location</p></td>
+                                                                    <td class="text-center"><p><a href="javasctipr:void(0);" class="link-danger">Not Completed</a></p></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><p></p></td>
+                                                                    <td><p class="fw-bolder">Complete Work Description</p></td>
+                                                                    <td class="text-center"><p><a href="javasctipr:void(0);" class="link-danger">Not Completed</a></p></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><p></p></td>
+                                                                    <td>
+                                                                        <p class="fw-bolder">Complete Driveway(s) Information</p>
+
+
+                                                                    </td>
+                                                                    <td class="text-center"><p><a href="javasctipr:void(0);" class="link-danger">Not Completed</a></p></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><p></p></td>
+                                                                    <td>
+                                                                        <p class="fw-bolder">Complete Sidewalk(s) Information</p>
+
+                                                                    </td>
+                                                                    <td class="text-center"><p><a href="javasctipr:void(0);" class="link-danger">Not Completed</a></p></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="col-md-1"><p></p></td>
+                                                                    <td class="col-md-9">
+                                                                        <p class="fw-bolder">Complete Other Items</p>
+
+                                                                    </td>
+                                                                    <td class="text-center"><p><a href="javasctipr:void(0);" class="link-danger">Not Completed</a></p></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="col-md-1"><p></p></td>
+                                                                    <td class="col-md-9">
+                                                                        <p class="fw-bolder">Add Attachments</p>
+                                                                    </td>
+                                                                    <td class="text-center"><p><a href="javasctipr:void(0);" class="link-danger">Not Completed</a></p></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </section>
+                                        <h3>Current Applicant Information</h3>
+                                        <section>
+                                            <div data-step="Current Applicant Information">
+                                                <h4>Current Applicant Information</h4>
+                                                <p>Class (A) Permit Reference No. 94406 </p>
+                                                <div class="row">
+                                                    <div class="table-responsive p-2">
+
+                                                        <table class="table table-responsive table-bordered table-striped ">
+                                                            <thead class="bg-primary text-white text-center visually-hidden">
+                                                                <tr>
+                                                                    <th class=""></th>
+                                                                    <th class=""></th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tr>
+                                                                <td>Applicant</td>
+                                                                <td>
+
+                                                                    <input class="form-control-plaintext" readonly value="Thuy-An Nguyen" />
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Contact</td>
+                                                                <td>
+                                                                    <input class="form-control-plaintext" readonly value="" />
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Address</td>
+                                                                <td>
+                                                                    <input class="form-control-plaintext" readonly value="601 S Figueroa St Suite 4650," />
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Address (Line2)</td>
+                                                                <td>
+                                                                    <input class="form-control-plaintext" readonly value="" />
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>City</td>
+                                                                <td>
+                                                                    <input class="form-control-plaintext" readonly value="Los Angeles" />
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>State</td>
+                                                                <td>
+                                                                    <input class="form-control-plaintext" readonly value="CA" />
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Zip/Postal Code</td>
+                                                                <td>
+                                                                    <input class="form-control-plaintext" readonly value="90017" />
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Phone</td>
+                                                                <td>
+                                                                    <input class="form-control-plaintext" readonly value="(323) 488-2846" />
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Email</td>
+                                                                <td>
+                                                                    <input class="form-control-plaintext" readonly value="thuy-an.nguyen@3insys.com" />
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Applicant Role</td>
+                                                                <td>
+                                                                    <select class="form-select">
+                                                                        <option>Select One</option>
+                                                                        <option>Agent</option>
+                                                                        <option>Contractor</option>
+                                                                        <option>Homeowner</option>
+                                                                        <option>Owner/ Developer</option>
+                                                                        <option>Private Engineer</option>
+                                                                    </select>
+
+                                                                </td>
+                                                            </tr>
+
+
+                                                        </table>
+                                                    </div>
+                                                    <!--<div class="col-md-12">
+                                                        <button class="btn btn-primary">Next</button>
+                                                        <button class="btn btn-primary">Cancel</button>
+                                                    </div>-->
+                                                </div>
+                                                <!--<div class="position-relative">
+                                                    <a href="javasctipt:;" class="btn btn-primary">Save</a>
+                                                </div>-->
+                                            </div>
+                                        </section>
+
+                                        <!-- Company Document -->
+                                        <h3>Complete Job Location</h3>
+                                        <section>
+                                            <div class="" data-step="Complete Job Location">
+                                                <h4>Complete Job Location</h4>
+                                                <p>Class (A) Permit Reference No. 94406 </p>
+                                                <div class="table-responsive mb-3">
+                                                    <table class="table table-bordered table-striped">
+                                                        <thead class="bg-primary text-white visually-hidden">
+                                                            <tr>
+                                                                <th></th>
+                                                                <th></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+
+                                                            <tr>
+                                                                <td>
+
+                                                                    <label>House Number</label><input type="text" class="form-control" />
+                                                                </td>
+                                                                <td>
+                                                                    <label>Street Name</label> <input type="text" class="form-control" />
+                                                                </td>
+
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                    <div class="col-md-12">
+                                                        <button class="btn btn-primary float-end m-1">cancel</button>
+                                                        <button class="btn btn-primary float-end m-1" data-bs-toggle="modal" data-bs-target="#address-Verification">search</button>
+
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered table-striped d-none" data-show-itm="address">
+                                                            <thead class="bg-primary text-white" role="rowgroup">
+                                                                <tr role="row">
+                                                                    <th role="gridcell"></th>
+                                                                    <th role="gridcell">Address</th>
+                                                                    <th role="gridcell">Zip Code</th>
+                                                                    <th role="gridcell">BOE Dist.</th>
+                                                                    <th role="gridcell">Council Dist.</th>
+                                                                    <th role="gridcell">
+                                                                        APN
+                                                                        (Assessor Parcel Number)
+                                                                    </th>
+                                                                    <th>PIN (Parcel Identification Number)</th>
+                                                                    <th>Action</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody role="rowgroup">
+                                                                <tr role="row">
+                                                                    <td role="gridcell"> <span class="m-2"><input type="checkbox" class="form-check-input p-2" /></span></td>
+                                                                    <td role="gridcell"> 1418 S WESTWOOD BLVD</td>
+                                                                    <td role="gridcell">90024</td>
+                                                                    <td role="gridcell">W</td>
+                                                                    <td role="gridcell">5</td>
+                                                                    <td role="gridcell">4325019019</td>
+                                                                    <td role="gridcell">1328153-874</td>
+                                                                    <td role="gridcell"><button class="btn btn-primary">Select</button></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+
+                                                <!--<div class="position-relative">
+                                                    <a href="javasctipt:;" class="btn btn-primary">Save</a>
+                                                </div>-->
+                                            </div>
+                                        </section>
+                                        <h3>Complete Work Description</h3>
+                                        <section>
+                                            <div data-step="Complete Work Description">
+
+                                                <div class="row">
+                                                    <h4>Complete Work Description</h4>
+                                                    <p>Class (A) Permit Reference No. 94406 </p>
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered table-striped">
+                                                            <thead class="visually-hidden">
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th></th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+
+                                                                <tr>
+                                                                    <td class="col-md-6">
+                                                                        <label class="form-check-label" for="checkbox1">Check if property is a Single Family Residence</label>
+                                                                    </td>
+                                                                    <td class="col-md-6">
+                                                                        <input type="checkbox" name="checkbox1" id="checkbox1" class="form-check-input" checked />
+                                                                    </td>
+                                                                </tr>
+
+
+                                                                <tr>
+                                                                    <td class="col-md-6">
+                                                                        <label class="form-label " for="WorkDescription">Work Description*</label>
+                                                                    </td>
+                                                                    <td class="col-md-6">
+                                                                        <select id="WorkDescription" class="form-select">
+                                                                            <option>Select Work Description </option>
+                                                                            <option>Resurfacing </option>
+                                                                            <option>Repair </option>
+                                                                            <option>Remodel </option>
+                                                                            <option>New </option>
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+
+
+                                                                <tr>
+                                                                    <td>
+                                                                        <span>Is any portion of the repair due to street tree root damage?*</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="form-check-inline">
+                                                                            <input name="WorkDescription" id="wdYes" value="Yes" type="radio" /><label for="wdYes">Yes</label>
+                                                                        </div>
+                                                                        <div class="form-check-inline">
+                                                                            <input name="WorkDescription" id="wdNo" value="No" type="radio" /><label for="wdYes">No</label>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+
+
+                                                                <tr>
+                                                                    <td><label for="">Is any portion of the repair due to earthquake?*</label></td>
+                                                                    <td>
+                                                                        <div class="form-check-inline">
+                                                                            <input name="WorkDescription1" id="wdYes1" value="Yes" type="radio" /><label for="wdYes1">Yes</label>
+                                                                        </div>
+                                                                        <div class="form-check-inline">
+                                                                            <input name="WorkDescription1" id="wdNo1" value="No" type="radio" /><label for="wdYes1">No</label>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+
+
+                                                                <tr>
+                                                                    <td><label for="">Will this Work Involve Cutting of Street Pavement?*</label></td>
+                                                                    <td>
+                                                                        <div class="form-check-inline">
+                                                                            <input name="WorkDescription2" id="wdYes2" value="Yes" type="radio" /><label for="wdYes2">Yes</label>
+                                                                        </div>
+                                                                        <div class="form-check-inline">
+                                                                            <input name="WorkDescription2" id="wdNo2" value="No" type="radio" /><label for="wdYes2">No</label>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td><label for="">15 Digit Building Permit Application (PCIS) Number (If Applicable)</label></td>
+                                                                    <td>
+
+
+                                                                        <input name="WorkDescription3" id="" class="form-control" value="" type="text" />
+
+                                                                    </td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="2">
+                                                                        <label for="">Customer Comments</label>
+                                                                        <textarea class="form-control" rows="5"></textarea>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!--<div class="col-md-12">
+                                                        <button class="btn btn-primary">Save</button>
+                                                        <button class="btn btn-primary">Cancel</button>
+                                                    </div>-->
+                                                </div>
+                                                <!--<div class="position-relative">
+                                                    <a href="javasctipt:;" class="btn btn-primary">Save</a>
+                                                </div>-->
+                                            </div>
+                                        </section>
+
+                                        <!-- Bank Details -->
+                                        <!-- Confirm Details -->
+                                        <h3>Complete Driveway Information</h3>
+                                        <section>
+                                            <div data-step="Complete Driveway Information">
+                                                <div class="">
+                                                    <h4>Complete Driveway Information</h4>
+                                                    <p>Class (A) Permit Reference No. 94406 </p>
+                                                    <p class="mb-2" style="text-align:justify;">
+                                                        Use this option if you are constructing a new driveway or replacing a full driveway. Answer No to this question, if not applicable.
+
+                                                        If you are repairing a portion of a driveway, you will be able to indicate that under Other Items.
+
+                                                        One or more driveways can be added using this option.
+                                                    </p>
+                                                    <div class="table-responsive">
+                                                        <div><button class="btn btn-primary float-end mb-2" data-bs-toggle="modal" data-bs-target="#AddDriveway">Add Driveway</button></div>
+                                                        <table class="table table-bordered table-striped">
+                                                            <thead class="bg-primary text-white">
+                                                                <tr>
+                                                                    <th>Driveway No.</th>
+                                                                    <th>Case  </th>
+                                                                    <th>Category</th>
+                                                                    <th>Material</th>
+                                                                    <th>Quantity (Sq. Ft.)</th>
+                                                                    <th>Actions</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>Residential</td>
+                                                                    <td>Concrete</td>
+                                                                    <td>75.29</td>
+                                                                    <td><a class="btn btn-link" href="javascript:;"><i class="fas fa-edit"></i></a> <a href="javascript:;" class="btn btn-link"><i class="fas fa-trash"></i></a> </td>
+
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!--<div class="position-relative">
+                                                    <a href="javasctipt:;" class="btn btn-primary">Save</a>
+                                                </div>-->
+                                            </div>
+                                        </section>
+                                        <h3>Complete Sidewalk Information</h3>
+                                        <section>
+                                            <div data-step="Complete Sidewalk Information">
+                                                <h4>Complete Sidewalk Information</h4>
+                                                <p>Class (A) Permit Reference No. 94406 </p>
+                                                <p class="mb-2" style="text-align: justify;">
+                                                    Use this option if you are constructing or repairing sidewalk(s).
+
+                                                    Answer No to this question, if not applicable.
+
+                                                    A new sidewalk can only be constructed next to an existing concrete curb.
+
+                                                    One or more sidewalk segments can be added using this option.
+                                                </p>
+                                                <div class="table-responsive">
+                                                    <div><button class="btn btn-primary float-end  mb-2" data-bs-toggle="modal" data-bs-target="#AddSidewalk">Add Sidewalk</button></div>
+                                                    <table class="table table-bordered table-striped">
+                                                        <thead class="bg-primary text-white">
+                                                            <tr>
+                                                                <th>sidewalk No.</th>
+                                                                <th>Quantity (Sq. Ft.)</th>
+                                                                <th>Actions</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>1</td>
+                                                                <td><a class="btn btn-link" href="javascript:;"><i class="fas fa-edit"></i></a> <a href="javascript:;" class="btn btn-link"><i class="fas fa-trash"></i></a></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <!--<div class="position-relative">
+                                                    <a href="javasctipt:;" class="btn btn-primary">Save</a>
+                                                </div>-->
+                                            </div>
+
+                                        </section>
+                                        <h3>Complete Other Items</h3>
+                                        <section>
+                                            <div data-step="Complete Other Items">
+                                                <div class="">
+                                                    <h4>Complete Other Items</h4>
+                                                    <p>Class (A) Permit Reference No. 94406 </p>
+                                                    <p class="mb-2" style="text-align:justify">
+                                                        Use this option if you are performing any of the following:
+
+
+                                                        Repair a portion of an existing driveway - Install or repair an ADA access ramp - Install curb drain(s) - Widening an existing
+
+                                                        driveway - Close an existing driveway and repair curb - Repair an existing gutter - Replace existing asphalt in roadway or alley.
+
+                                                        Leave quantities blank, if not applicable
+                                                    </p>
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered table-striped">
+                                                            <thead class="bg-primary text-white">
+                                                                <tr>
+                                                                    <th class="col-md-6">Item Description</th>
+                                                                    <th class="col-md-4">Quantity</th>
+                                                                    <th class="col-md-2">Unit</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Repair Existing Driveway (Concrete)</td>
+                                                                    <td><input class="form-control" type="text" /></td>
+                                                                    <td>Sq. Ft.</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Asphalt Pavement of Roadway/Alley/Driveway</td>
+                                                                    <td><input class="form-control" type="text" /></td>
+                                                                    <td>Sq. Ft.</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Install/Upgrade ADA Access Ramp</td>
+                                                                    <td><input class="form-control" type="text" /></td>
+                                                                    <td>Sq. Ft.</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Repair/Replace Existing Concrete Curb</td>
+                                                                    <td><input class="form-control" type="text" /></td>
+                                                                    <td>Ft.</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Cut an Existing Concrete Curb</td>
+                                                                    <td><input class="form-control" type="text" /></td>
+                                                                    <td>Ft.</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Install/Repair Curb Drain</td>
+                                                                    <td><input class="form-control" type="text" /></td>
+                                                                    <td>Each</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Repair Gutter (Concrete)</td>
+                                                                    <td><input class="form-control" type="text" /></td>
+                                                                    <td>Sq. Ft.</td>
+                                                                </tr>
+
+                                                            </tbody>
+                                                        </table>
+
+                                                    </div>
+
+                                                </div>
+                                                <!--<div class="position-relative">
+                                                    <a href="javasctipt:;" class="btn btn-primary">Save</a>
+                                                </div>-->
+                                            </div>
+
+                                        </section>
+                                        <h3>Add Attachments</h3>
+                                        <section>
+                                            <div data-step="Add Attachments">
+                                                <h4>Add Attachments</h4>
+                                                <p>Class (A) Permit Reference No. 94406 </p>
+                                                <div class="table-responsive">
+                                                    <table class="table table-bordered table-striped">
+                                                        <thead class="visually-hidden">
+                                                            <tr>
+                                                                <th></th>
+                                                                <th></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Document Description</td>
+                                                                <td><input type="text" class="form-control" /></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>File to Upload </td>
+                                                                <td>
+                                                                    <input type="file" class="form-control" />
+
+                                                                    <p class="text-danger mt-2">
+                                                                        (Allowed file extensions are .pdf, .jpg, .gif) Use this utility to upload one attachment at a time.
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <!--<div class="position-relative">
+                                                    <a href="javasctipt:;" class="btn btn-primary">Save</a>
+                                                </div>-->
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end card -->
+                        </div>
+                        <!-- end col -->
+                    </div>
+                    <!-- end row -->
+                </div> <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            © 1999-2022 Bureau of Engineering
+                        </div>
+
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- end main content-->
+    </div>
+    <!-- END layout-wrapper -->
+    <!-- Right Sidebar -->
+    <div class="right-bar">
+        <div data-simplebar class="h-100">
+            <div class="rightbar-title d-flex align-items-center px-3 py-4">
+
+                <h5 class="m-0 me-2">Settings</h5>
+
+                <a href="javascript:void(0);" class="right-bar-toggle ms-auto">
+                    <i class="mdi mdi-close noti-icon"></i>
+                </a>
+            </div>
+
+            <!-- Settings -->
+            <hr class="mt-0" />
+            <h6 class="text-center mb-0">Choose Layouts</h6>
+
+            <div class="p-4">
+                <div class="mb-2">
+                    <img src="assets/images/layouts/layout-1.jpg" class="img-thumbnail" alt="layout images">
+                </div>
+
+                <div class="form-check form-switch mb-3">
+                    <input class="form-check-input theme-choice" type="checkbox" id="light-mode-switch" checked>
+                    <label class="form-check-label" for="light-mode-switch">Light Mode</label>
+                </div>
+
+                <div class="mb-2">
+                    <img src="assets/images/layouts/layout-2.jpg" class="img-thumbnail" alt="layout images">
+                </div>
+                <div class="form-check form-switch mb-3">
+                    <input class="form-check-input theme-choice" type="checkbox" id="dark-mode-switch">
+                    <label class="form-check-label" for="dark-mode-switch">Dark Mode</label>
+                </div>
+
+                <div class="mb-2">
+                    <img src="assets/images/layouts/layout-3.jpg" class="img-thumbnail" alt="layout images">
+                </div>
+                <div class="form-check form-switch mb-3">
+                    <input class="form-check-input theme-choice" type="checkbox" id="rtl-mode-switch">
+                    <label class="form-check-label" for="rtl-mode-switch">RTL Mode</label>
+                </div>
+
+                <div class="mb-2">
+                    <img src="assets/images/layouts/layout-4.jpg" class="img-thumbnail" alt="layout images">
+                </div>
+                <div class="form-check form-switch mb-5">
+                    <input class="form-check-input theme-choice" type="checkbox" id="dark-rtl-mode-switch">
+                    <label class="form-check-label" for="dark-rtl-mode-switch">Dark RTL Mode</label>
+                </div>
+
+
+            </div>
+
+        </div> <!-- end slimscroll-menu-->
+    </div>
+    <div class="modal fade" id="address-Verification" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="">Address Verification</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>The provided address was not found in the Bureau of Engineering address database.</h5>
+                    <h6>The Bureau of Engineering will issue a new address under the following conditions:</h6>
+                    <p class="mb-2">Assessor's Parcel Number (APN) must be provided.</p>
+                    <p class="mb-2">Proof that the address is officially observed through the Los Angeles County Tax Collector (Tax bills are mailed to the address), a Business License, building permit, or other official document reference.</p>
+                    <p class="mb-2">Legal description, APN, Tract, map reference, block, lot, and arbitrary unit can be obtained (in most cases) from Navigate LA Geographic Information System.</p>
+                    <p class="mb-2">The Bureau of Engineering cannot issue an "A" permit until address is verified and approved.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-show-btn="address">Add Address</button><button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="AddDriveway" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Driveway</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead></thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="form-check"> <label class="form-check-label" for="caseimg1">Case1</label><input type="radio" class="form-check-input" id="caseimg1" name="casename" /></div></td>
+                                    <td><img src="assets/images/cash1.jpg" class="m-auto" style="height:200px;" /></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="form-check"><label class="form-check-label" for="caseimg2">Case2</label><input type="radio" class="form-check-input" id="caseimg2" name="casename" /></div></td>
+                                    <td><img src="assets/images/cash2.jpg" class="m-auto" style="height:200px;" /></td>
+                                </tr>
+
+                                <tr>
+                                    <td><div class="form-check"> <label class="form-check-label" for="caseimg3">Case3</label><input type="radio" class="form-check-input" id="caseimg3" name="casename" /></div></td>
+                                    <td><img src="assets/images/cash3.jpg" class="m-auto" style="height:200px;" /></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#driveInformation">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="driveInformation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Drive Information</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Driveway Category:</td>
+                                    <td>
+                                        <div class="form-check"><label class="form-check-label" for="dResidential">Residential</label><input type="radio" class="form-check-input" name="drivewayCategory" id="dResidential" /></div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check"><label class="form-check-label" for="dCommercial">Commercial</label><input type="radio" class="form-check-input" id="dCommercial" name="drivewayCategory" /></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center">Driveway Approach Measurement:</th>
+                                    <th class="text-center">Feet</th>
+                                    <th class="text-center">Inch</th>
+                                </tr>
+                                <tr>
+                                    <td>Width of Driveway Approach (W)</td>
+                                    <td><input type="text" class="form-control" /></td>
+                                    <td><input type="text" class="form-control" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Distance from curb to back of sidewalk (A)</td>
+                                    <td><input type="text" class="form-control" /></td>
+                                    <td><input type="text" class="form-control" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Width of gutter (GW) (Inches)</td>
+                                    <td></td>
+                                    <td><input type="text" class="form-control" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Curb Height (CH) (Inches)</td>
+                                    <td></td>
+                                    <td><input type="text" class="form-control" /></td>
+                                </tr>
+                                <tr>
+                                    <td><p class="fw-bold">Are there any trees, fire hydrants, street lights, traffic signals, or other items in or near the driveway opening?</p> (Disregard any items that are 10 feet or more away from the opening.)</td>
+                                    <td>
+                                        <div class="form-check"><label class="form-check-label" for="yesno1">Yes</label><input type="radio" class="form-check-input" name="yesnoname" id="yesno1" /></div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check"><label class="form-check-label" for="yesno2">No</label><input type="radio" class="form-check-input" id="yesno2" name="yesnoname" /></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <div class="m-auto w-75">
+                                            <label class="form-label">If Yes, Please list each item and its distance from the proposed driveway opening:</label>
+                                            <textarea class="form-control" rows="5"></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#drivewaymodal">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="drivewaymodal" tabindex="-1" aria-labelledby="driveway" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Driveway(s):</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead class="visually-hidden">
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Will This Permit Include Constructing or Replacing a Full Driveway(s)?</td>
+                                    <td>
+                                        <div class="form-check"><label class="form-check-label" for="driveway1">Yes</label><input type="radio" class="form-check-input" name="driveway" id="driveway1" /></div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check"><label class="form-check-label" for="driveway2">No</label><input type="radio" class="form-check-input" id="driveway2" name="driveway" /></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="AddSidewalk" tabindex="-1" aria-labelledby="AddSidewalk" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Sidewalk</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead class="visually-hidden">
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td>Foot</td>
+                                    <td>Inch</td>
+                                </tr>
+                                <tr>
+                                    <td>Length of Sidewalk Segment</td>
+                                    <td><input type="text" class="form-control" /></td>
+                                    <td><input type="text" class="form-control" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Width of Sidewalk Segment</td>
+                                    <td><input type="text" class="form-control" /></td>
+                                    <td><input type="text" class="form-control" /></td>
+                                </tr>
+                                <tr>
+                                    <td>This Sidewalk Work is for.</td>
+                                    <td colspan="3">
+                                        <select class="form-select">
+                                            <option>Select One</option>
+                                            <option>Repair</option>
+                                            <option>Replacement</option>
+                                            <option>New Construction</option>
+                                        </select>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Sidewalkmodal">Save </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="Sidewalkmodal" tabindex="-1" aria-labelledby="driveway" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sidewalks(s):</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Will This Permit Include Constructing or Replacing a Sidewalk(s)?</td>
+                                    <td>
+                                        <div class="form-check"><label class="form-check-label" for="sidewalk1">Yes</label><input type="radio" class="form-check-input" name="sidewalk" id="sidewalk1" /></div>
+                                    </td>
+                                    <td>
+                                        <div class="form-check"><label class="form-check-label" for="sidewalk2">No</label><input type="radio" class="form-check-input" id="sidewalk2" name="sidewalk" /></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="finishedmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Submit Application</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="mb-2">Your application can be submitted only after completing all the steps above.</p>
+                    <p class="mb-2">Once your application is submitted, it cannot be revised. Applicant can submit/view attachments at any time.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confimmodal">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="confimmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Submit Application</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center pb-2">A-Permit - Reference Number: 94406</p>
+                    <h5 class="text-center pb-2">This application was submitted on 11/06/2022</h5>
+                    <p class="text-center"> Application cannot be modified <br />Attachments can be added</p>
+                </div>
+                <div class="modal-footer">
+                    <!--<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="location.href='view-application.html'">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="startApplicarion" tabindex="-1" aria-labelledby="startApplicarion" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">New Application Started</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5></h5>
+                    <p class="mb-2">You just started a new A-Permit Application.</p>
+                    <p class="mb-2"><strong>Your application Reference Number is :</strong> <span class="text-danger fw-bold">94406</span> </p>
+                    <p class="mb-2">Please use only the navigation buttons and links within the application.</p>
+                    <p class="mb-2">
+                        At any time you can resume your application process by clicking "My Previous Application" and click on
+                        the above reference number.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="nextstepbtn">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Right-bar -->
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay"></div>
+
+    <!-- JAVASCRIPT -->
+    <script src="assets/libs/jquery/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+    <script src="assets/libs/dropzone/min/dropzone.min.js"></script>
+    <!-- jquery step -->
+    <script src="assets/libs/jquery-steps/build/jquery.steps.min.js"></script>
+
+    <!-- form wizard init -->
+    <script src="assets/js/pages/form-wizard.init.js"></script>
+
+    <script src="assets/js/app.js"></script>
+    <script>
+
+        function mydrivefirst() {
+            alert(`<h5>engstaging.lacity.org says</h5><p>
+You selected Yes for:</p>
+Are there any trees, fire hydrants, street lights, traffic signals, or other items in or near the driveway opening?
+Please list each item and its distance from the proposed driveway opening.`);
+        }
+        function mydrivefirst1() {
+            alert(`If You are applying for a Partial Driveway Replacement / Repair This should be done under the "Other Items" option.`);
+        }
+
+        //<a href="#finish" role="menuitem">Finish</a>
+        $(document).ready(function () {
+            $('[data-show-btn=address]').click(function () {
+                $('[data-show-itm=address]').removeClass('d-none')
+            })
+
+            $('a[href$="#finish"]').attr({ 'data-bs-toggle': 'modal', 'data-bs-target': '#finishedmodal' })
+            //$('#nextstepbtn').click(function () {
+            //    $('#vertical-example-h-1').addClass("current");
+            //    $('#vertical-example-h-0').removeClass("current");
+            //    $('#vertical-example-p-1').css('display', '');
+            //    $('#vertical-example-p-0').css('display', 'none')
+            //    $('#vertical-example-p-1').attr('aria-hidden','false')
+            //    $('#vertical-example-p-0').attr('aria-hidden','true')
+            //    $('#vertical-example-t-1').parent().addClass("current");
+            //    $('#vertical-example-t-1').parent().removeClass("disabled");
+            //    $('#vertical-example-t-1').parent().attr("aria-disabled", "false");
+            //    $('#vertical-example-t-1').parent().attr("aria-selected", "true");
+            //    $('#vertical-example-t-0').parent().attr("aria-selected", "false");
+            //    $('#vertical-example-t-0').parent().removeClass("current");
+            //    $('#vertical-example-t-0').parent().addClass("done");
+            //    $('#vertical-example-t-0').parent().attr("aria-disabled", "false");
+            //    $('a[href="#previous"]').parent().attr("aria-disabled", "false");
+            //    $('a[href="#previous"]').parent().removeClass("disabled");
+            //})
+
+
+            $('div.actions.clearfix ul').append(`<li><a href='javascript:;'>Save</a></li>`)
+
+        })
+    </script>
+</body>
+
+</html>
