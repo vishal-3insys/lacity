@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="assets/css/swipper.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/boxicon.min.css" rel="stylesheet" />
     <link href="assets/css/responsive.css" rel="stylesheet" />
     <link href="assets/css/style1.css" rel="stylesheet" />
     <link href="assets/css/layout-style.css" rel="stylesheet" />
@@ -34,6 +35,38 @@
 
         .karx-submit-form-default-single label.condition::after {
             display: none;
+        }
+
+        .faq-section .accordion .accordion-item [aria-expanded="true"] {
+            background-color: #001935;
+            border-radius: 0.5rem;
+        }
+
+        .accordion-header {
+            border-radius: 0.5rem !important;
+        }
+
+        .accordion-item {
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+            border-radius: 0.5rem !important;
+            border: 1px solid rgba(0,0,0,.125);
+        }
+
+        .faq-section .accordion .accordion-item [aria-expanded="true"] h2,
+        .faq-section .accordion .accordion-item [aria-expanded="true"] h3,
+        .faq-section .accordion .accordion-item [aria-expanded="true"] h4,
+        .faq-section .accordion .accordion-item [aria-expanded="true"] h5,
+        .faq-section .accordion .accordion-item [aria-expanded="true"] h6,
+        .faq-section .accordion .accordion-item [aria-expanded="true"] h2 p,
+        .faq-section .accordion .accordion-item [aria-expanded="true"] h3 p,
+        .faq-section .accordion .accordion-item [aria-expanded="true"] h4 p,
+        .faq-section .accordion .accordion-item [aria-expanded="true"] h5 p,
+        .faq-section .accordion .accordion-item [aria-expanded="true"] h6 p {
+            color: #ffffff;
+        }
+
+        .faq-section p {
+            font-size: 14px;
         }
     </style>
 </head>
@@ -78,12 +111,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xxl-3 col-xl-3 col-lg-5 col-md-5 col-sm-3 col-auto d-inline-flex d-sm-flex justify-content-end">
-                            <div class="m-2">
-                                <a class="btn btn-theme p-3" href="sign-in.html"><i class="fas fa-user"></i> &nbsp;Sign In</a>
+                        <div class="col-xxl-3 col-xl-3 col-lg-5 col-md-5 col-sm-3 col-auto d-inline-flex d-sm-flex justify-content-end" id="loginArea">
+                            <div class="m-2" id="loginBtn">
+                                <a class="btn btn-theme" href="sign-in.html"><i class="fas fa-user"></i> &nbsp;Sign In</a>
                             </div>
-                            <div class="m-2">
-                                <a class="btn btn-theme p-3" href="sign-up.html"><i class="fas fa-user"></i> Sign Up</a>
+                            <div class="m-2" id="signUpBtn">
+                                <a class="btn btn-theme " href="sign-up.html"><i class="fas fa-user"></i> Sign Up</a>
                             </div>
 
                         </div>
@@ -257,33 +290,33 @@
 
                             <ul id="r-permitli-list">
 
-                                <li><a href="what-is-r-permit.html" target="_top">What is a Revocable Permit</a></li>
+                                <li><a href="what-is-r-permit.html" target="_top"><i class="bx bx-user"></i>What is a Revocable Permit</a></li>
 
 
-                                <li><a href="information-r-permit.html" target="_top">Information</a></li>
+                                <li><a href="information-r-permit.html" target="_top"><i class="bx bx-user"></i>Information</a></li>
 
-                                <li><a href="how-to-apply-r-permit.html" target="_top" class="active">How to Apply</a> </li>
+                                <li><a href="how-to-apply-r-permit.html" target="_top" class="active"><i class="bx bx-user"></i>How to Apply</a> </li>
 
-                                <li><a href="#" target="_top">Apply for a New Permit</a></li>
+                                <li><a href="#" target="_top"><i class="bx bx-user"></i>Apply for a New Permit</a></li>
 
-                                <li><a href="#" target="_top">Check status of a Permit</a></li>
+                                <li><a href="#" target="_top"><i class="bx bx-user"></i>Check status of a Permit</a></li>
 
-                                <li><a href="#" target="_top">Insurance Requirements</a></li>
+                                <li><a href="#" target="_top"><i class="bx bx-user"></i>Insurance Requirements</a></li>
 
-                                <li><a href="#" target="_top">Sidewalk Dining Handout</a></li>
-
-
-
-
-                                <li><a href="#" target="_blank">Frequently Asked Questions</a></li>
-
-                                <li><a href="#" target="_blank">Contact Us</a></li>
+                                <li><a href="#" target="_top"><i class="bx bx-user"></i>Sidewalk Dining Handout</a></li>
 
 
 
-                                <li><a href="#" target="_blank">Engineering Home Page</a></li>
 
-                                <li><a href="#" target="_top">Log Out</a></li>
+                                <li><a href="#" target="_blank"><i class="bx bx-user"></i>Frequently Asked Questions</a></li>
+
+                                <li><a href="#" target="_blank"><i class="bx bx-user"></i>Contact Us</a></li>
+
+
+
+                                <li><a href="#" target="_blank"><i class="bx bx-user"></i>Engineering Home Page</a></li>
+
+                                <li><a href="#" target="_top"><i class="bx bx-log-out"></i>Log Out</a></li>
 
                             </ul>
                         </div>
@@ -303,13 +336,13 @@
                                             <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#r-item1" aria-expanded="false" aria-controls="flush-collapseOne">
                                                 <h6>
                                                     1.&nbsp; Applicant submits a completed application form "Request for
-                                                    Revocable Permit" <p class=" text-center px-5" role="button">(Can be submitted online or at the counter)</p>
+                                                    Revocable Permit" <p class="ps-3" role="button">(Can be submitted online or at the counter)</p>
                                                 </h6>
 
                                             </div>
 
                                         </div>
-                                        <div id="r-item1" class="accordion-collapse collapse" aria-labelledby="r-title1" data-bs-parent="#accordionFlushRpermit">
+                                        <div id="r-item1" class=" accordion-collapse collapse" aria-labelledby="r-title1" data-bs-parent="#accordionFlushRpermit">
                                             <div class="accordion-body">
                                                 (Application form may be filled and submitted online, submitted at or mailed to one of Bureau of Engineering District Offices.)
                                                 Bureau of Engineering District Locations and Hours of Operation.
@@ -317,11 +350,11 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="accordion-item">
+                                    <div class="accordion-item ">
                                         <div class="accordion-header" id="r-title2">
                                             <div class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#r-item2" aria-expanded="false" aria-controls="flush-collapseTwo">
                                                 <h6>
-                                                    2.&nbsp; Applicant submits a sketch showing the encroachment with dimensions. <p class="text-center px-5" role="button">
+                                                    2.&nbsp; Applicant submits a sketch showing the encroachment with dimensions. <p class="ps-3" role="button">
                                                         (Can be scanned and uploaded through this application as an attachment, mailed to the corresponding
                                                         district, or submitted at the counter of the corresponding district).
                                                     </p>
@@ -341,7 +374,7 @@
                                             <div class="accordion-button accordion-title collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#r-item3" aria-expanded="false" aria-controls="flush-collapseThree">
                                                 <h6>
                                                     3.&nbsp; Applicant submits a copy of valid deed and lease agreement, if lessee.
-                                                    <p class="text-center px-5" role="button">
+                                                    <p class="ps-3" role="button">
                                                         (Can be scanned and uploaded through this application as an attachment, mailed to the corresponding
                                                         district, or submitted at the counter of the corresponding district).
                                                     </p>
@@ -360,7 +393,7 @@
                                             <div class="accordion-button accordion-title collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#r-item4" aria-expanded="false" aria-controls="flush-collapseThree">
                                                 <h6>
                                                     4.&nbsp; Applicant Pays the appropriate fee.
-                                                    <p class="text-center px-5" role="button">
+                                                    <p class="ps-3" role="button">
 
                                                         (Application fees can be paid online, at the counter, or by mailing a check to the corresponding
                                                         district).
@@ -378,13 +411,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="accordion-item card">
-                                        <div class="accordion-header card-header-pills" id="r-title5" role="button">
-                                            <div class="accordion-button accordion-title collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#r-item5" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    <div class="accordion-item ">
+                                        <div class="accordion-header" id="r-title5" role="button">
+                                            <div class="accordion-button  collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#r-item5" aria-expanded="false" aria-controls="flush-collapseThree">
                                                 <h6>
                                                     5.&nbsp; Bureau of Engineering will conduct a field investigation and prepare
                                                     report to the Board of Public Works, if required.
-                                                    <p class="text-center px-5" role="button">
+                                                    <p class="ps-3" role="button">
 
                                                         (Application fees can be paid online, at the counter, or by mailing a check to the corresponding
                                                         district).
@@ -415,7 +448,7 @@
                                             <div class="accordion-button accordion-title collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#r-item6" aria-expanded="false" aria-controls="flush-collapseThree">
                                                 <h6>
                                                     6.&nbsp; Special conditions for hillside areas.
-                                                    <p class="text-center px-5" role="button">
+                                                    <p class="ps-3" role="button">
 
                                                         (Application fees can be paid online, at the counter, or by mailing a check to the corresponding
                                                         district).
@@ -451,7 +484,7 @@
                                             <div class="accordion-button accordion-title collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#r-item7" aria-expanded="false" aria-controls="flush-collapseThree">
                                                 <h6>
                                                     7.&nbsp; Fee Information.
-                                                    <p class="text-center px-5" role="button">
+                                                    <p class="ps-3" role="button">
 
                                                         (Application fees can be paid online, at the counter, or by mailing a check to the corresponding
                                                         district).
@@ -609,6 +642,7 @@
             s0.parentNode.insertBefore(s1, s0);
         })();
     </script>
+   
     <script src="assets/js/layout.js"></script>
 
 

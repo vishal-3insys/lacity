@@ -35,6 +35,17 @@
         .karx-submit-form-default-single label.condition::after {
             display: none;
         }
+        .category-card {
+            display: flex;
+            text-align: center;
+            padding: 30px 25px;
+            -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+            margin-bottom: 30px;
+            border: 1px solid transparent;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+        }
     </style>
 </head>
 
@@ -78,12 +89,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xxl-3 col-xl-3 col-lg-5 col-md-5 col-sm-3 col-auto d-inline-flex d-sm-flex justify-content-end">
-                            <div class="m-2">
-                                <a class="btn btn-theme p-3" href="sign-in.html"><i class="fas fa-user"></i> &nbsp;Sign In</a>
+                        <div class="col-xxl-3 col-xl-3 col-lg-5 col-md-5 col-sm-3 col-auto d-inline-flex d-sm-flex justify-content-end" id="loginArea">
+                            <div class="m-2" id="loginBtn">
+                                <a class="btn btn-theme" href="sign-in.html"><i class="fas fa-user"></i> &nbsp;Sign In</a>
                             </div>
-                            <div class="m-2">
-                                <a class="btn btn-theme p-3" href="sign-up.html"><i class="fas fa-user"></i> Sign Up</a>
+                            <div class="m-2" id="signUpBtn">
+                                <a class="btn btn-theme " href="sign-up.html"><i class="fas fa-user"></i> Sign Up</a>
                             </div>
 
                         </div>
@@ -257,33 +268,33 @@
 
                             <ul id="r-permitli-list">
 
-                                <li ><a href="what-is-r-permit.html" target="_top" >What is a Revocable Permit</a></li>
+                                <li><a href="what-is-r-permit.html" target="_top"><i class="bx bx-user"></i>What is a Revocable Permit</a></li>
 
 
-                                <li><a href="information-r-permit.html" target="_top" class="active">Information</a></li>
+                                <li><a href="information-r-permit.html" class="active" target="_top"><i class="bx bx-user"></i>Information</a></li>
 
-                                <li><a href="#" target="_top">How to Apply</a> </li>
+                                <li><a href="how-to-apply-r-permit.html" target="_top" ><i class="bx bx-user"></i>How to Apply</a> </li>
 
-                                <li><a href="#" target="_top">Apply for a New Permit</a></li>
+                                <li><a href="#" target="_top"><i class="bx bx-user"></i>Apply for a New Permit</a></li>
 
-                                <li><a href="#" target="_top">Check status of a Permit</a></li>
+                                <li><a href="#" target="_top"><i class="bx bx-user"></i>Check status of a Permit</a></li>
 
-                                <li><a href="#" target="_top">Insurance Requirements</a></li>
+                                <li><a href="#" target="_top"><i class="bx bx-user"></i>Insurance Requirements</a></li>
 
-                                <li><a href="#" target="_top">Sidewalk Dining Handout</a></li>
-
-
-
-
-                                <li><a href="#" target="_blank">Frequently Asked Questions</a></li>
-
-                                <li><a href="#" target="_blank">Contact Us</a></li>
+                                <li><a href="#" target="_top"><i class="bx bx-user"></i>Sidewalk Dining Handout</a></li>
 
 
 
-                                <li><a href="#" target="_blank">Engineering Home Page</a></li>
 
-                                <li><a href="#" target="_top">Log Out</a></li>
+                                <li><a href="#" target="_blank"><i class="bx bx-user"></i>Frequently Asked Questions</a></li>
+
+                                <li><a href="#" target="_blank"><i class="bx bx-user"></i>Contact Us</a></li>
+
+
+
+                                <li><a href="#" target="_blank"><i class="bx bx-user"></i>Engineering Home Page</a></li>
+
+                                <li><a href="index.html" target="_top"><i class="bx bx-log-out"></i>Log Out</a></li>
 
                             </ul>
                         </div>
@@ -304,27 +315,27 @@
                                     </div>
                                     <div class="card-body">
                                         <div class="row">
-                                            <div class="col-lg-3 col-md-4 col-sm-6 category-card">
-                                                <a href="#" class="d-flex">
-                                                    <div  >
+                                            <div class="col-lg-3 col-md-4 col-sm-6 p-2 d-flex">
+                                                <a href="#" class="category-card">
+                                                    <div class="" >
                                                         <!--<i class="flaticon-accounting"></i>-->
                                                         <!-- <p>301 open position</p>-->
                                                         <h3> Revocable 'R' Permits Overview</h3>
                                                     </div>
                                                 </a>
                                             </div>
-                                            <div class="col-lg-3 col-md-4 col-sm-6 category-card">
-                                                <a href="#" class=" d-flex">
-                                                    <div >
+                                            <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+                                                <a href="#" class="category-card">
+                                                    <div class="">
                                                         <!--<i class="flaticon-accounting"></i>-->
                                                         <!-- <p>301 open position</p>-->
                                                         <h3>Technical Procedures</h3>
                                                     </div>
                                                 </a>
                                             </div>
-                                            <div class="col-lg-3 col-md-4 col-sm-6 category-card">
-                                                <a href="#" class=" d-flex">
-                                                    <div >
+                                            <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+                                                <a href="#" class="category-card">
+                                                    <div class="">
                                                         <!--<i class="flaticon-accounting"></i>-->
                                                         <!-- <p>301 open position</p>-->
                                                         <h3>Checklists and Sample Documents</h3>
@@ -332,8 +343,6 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        
-
                                     </div>
                                 </div>
                             </div>
